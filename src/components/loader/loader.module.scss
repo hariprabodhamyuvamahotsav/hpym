@@ -114,7 +114,6 @@ $speed: 90s;
   aspect-ratio: initial !important;
   margin: 0 max(60px, 12vw);
   opacity: 1;
-  // filter: contrast(1.1) grayscale(0.5) brightness(1.1);
 }
 
 .main_Slogan_Wrapper{
@@ -143,7 +142,7 @@ $speed: 90s;
     -webkit-text-fill-color: $primary-light; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgba($text,0.1);
-    animation: marquee $speed linear infinite;
+    animation: marquee $speed*2 linear infinite;
   }
   &:first-child{
     span{
