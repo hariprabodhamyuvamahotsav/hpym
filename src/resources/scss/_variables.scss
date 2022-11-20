@@ -1,0 +1,78 @@
+@use "sass:color";
+@use 'sass:math';
+
+@function rem($size) {
+  @return calc($size/ 16px) * 1rem;
+}
+
+@function em($size) {
+  @return calc($size/ 16px) * 1em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              initial-variables                             */
+/* -------------------------------------------------------------------------- */
+// Colors
+$black:         hsl(0deg 0% 4%) !default;
+$black-bis:     hsl(0deg 0% 9%) !default;
+$black-ter:     hsl(0deg 0% 14%) !default;
+
+$grey-darker:   hsl(0deg 0% 21%) !default;
+$grey-dark:     hsl(0deg 0% 29%) !default;
+$grey:          hsl(0deg 0% 48%) !default;
+$grey-light:    hsl(0deg 0% 71%) !default;
+$grey-lighter:  hsl(0deg 0% 86%) !default;
+$grey-lightest: hsl(0deg 0% 93%) !default;
+
+$white-ter:     hsl(0deg 0% 92%) !default;
+$white-bis:     hsl(0deg 0% 96%) !default;
+$white:         hsl(0deg 0% 100%) !default;
+
+$orange:        hsl(14deg  100% 53%) !default;
+$yellow:        hsl(44deg  100% 77%) !default;
+$green:         hsl(153deg 53%  53%) !default;
+$turquoise:     hsl(163deg 75% 37%) !default;
+$cyan:          hsl(207deg 61%  53%) !default;
+$blue:          hsl(217deg 61% 40%) !default;
+$purple:        hsl(271deg 100% 71%) !default;
+$red:           hsl(348deg 86% 61%) !default;
+$skyblue:       hsl(201deg, 81%, 38%, 0.3)!default;
+
+$font-primary: 'Lora', serif;
+$font-title: 'Canvas', serif;
+
+/* Text-size styles */
+$h1: rem(96px);
+$h2: rem(60px);
+$h3: rem(48px);
+$h4: rem(34px);
+$h5: rem(24px);
+$body-lg: rem(20px);
+$body: rem(16px);
+// $display-2xl: 72px;
+// $display-xl: 60px;
+// $display-lg: 48px;
+// $display-md: 36px;
+// $display-sm: 30px;
+// $display-xs: 24px;
+// $text-xl: 20px;
+// $text-lg: 18px;
+// $text-md: 16px;
+// $text-sm: 14px;
+// $text-xs: 12px;
+
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-bold: 700 !default;
+
+$primary: #F8F0DF !default;
+$primary-light: #FEFBF3 !default;
+// $secondary: #799db7 !default;
+
+
+// $primary: #D8D9CF !default;
+// $primary-light: #EDEDED !default;
+$secondary: #E26868 !default;
+$secondary-light: #FF8787 !default;
+$text: #5D5D5D !default;
+$text-light: #9D9D9D !default;

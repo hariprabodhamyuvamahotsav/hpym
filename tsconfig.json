@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -13,8 +14,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "paths":{
+      "@components/*": ["./src/components/*"],
+      "@resources/*": ["./src/resources/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@images/*": ["./src/resources/images/*"],
+      "@styles/*": ["./src/resources/scss/*"],
+      "@fonts/*": ["./src/resources/fonts/*"]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  // "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*"],
   "exclude": ["node_modules"]
 }

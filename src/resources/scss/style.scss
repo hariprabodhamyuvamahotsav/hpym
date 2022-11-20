@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'mixins';
+@import 'reboot';
+@import 'layout';
+@import 'typography';
+@import 'custom';
+
+@font-face {
+    font-family: 'Canvas';
+    src: url('../fonts/canvas/Canvas-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canvas';
+    src: url('../fonts/canvas/Canvas.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canvas';
+    src: url('../fonts/canvas/Canvas-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora/Lora-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora/Lora-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora/Lora-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
