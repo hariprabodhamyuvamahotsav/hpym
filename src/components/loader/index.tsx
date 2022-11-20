@@ -35,13 +35,11 @@ export default function Loader() {
             <Image className={style.single_Img} src={img1} alt='' width={150} height={200} />
             <Image className={style.single_Img} src={img2} alt='' width={150} height={200} />
             <Image className={style.single_Img} src={img3} alt='' width={150} height={200} />
-            <Image className={style.single_Img} src={img4} alt='' width={150} height={200} />
           </div>
           <div className={style.img_Row}>
             <Image className={style.single_Img} src={img1} alt='' width={150} height={200} />
             <Image className={style.single_Img} src={img2} alt='' width={150} height={200} />
             <Image className={style.single_Img} src={img3} alt='' width={150} height={200} />
-            <Image className={style.single_Img} src={img4} alt='' width={150} height={200} />
           </div>
         </div>
         <div className={style.img_Grid}>
@@ -49,13 +47,11 @@ export default function Loader() {
             <Image className={style.single_Img} src={img7} alt='' width={150} height={200} />
             <Image className={style.single_Img} src={img8} alt='' width={150} height={200} />
             <Image className={style.single_Img} src={img9} alt='' width={150} height={200} />
-            <Image className={style.single_Img} src={img10} alt='' width={150} height={200} />
           </div>
           <div className={style.img_Row}>
             <Image className={style.single_Img} src={img7} alt='' width={150} height={200} />
             <Image className={style.single_Img} src={img8} alt='' width={150} height={200} />
             <Image className={style.single_Img} src={img9} alt='' width={150} height={200} />
-            <Image className={style.single_Img} src={img10} alt='' width={150} height={200} />
           </div>
         </div>
       </div>
