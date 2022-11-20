@@ -17,6 +17,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  position: absolute;
+  padding-bottom: 1rem;
 }
 
 .main_Title{
@@ -38,19 +40,27 @@
   span{
     color: $secondary;
   }
+
+  @include MQ(767px){
+    small{
+      font-size: 0.7em;
+    }
+    font-size: 16vw;
+    text-align: center;
+  }
 }
 
-.main_Title_Hari{
-  padding-left: 0;
-}
 .main_Title_Prabodham{
   padding-left: 5vw;
-}
-.main_Title_Yuva{
-  padding-left: 0;
+  @include MQ(767px){
+    padding-left: 0;
+  }
 }
 .main_Title_Mahotsav{
   padding-left: 10vw;
+  @include MQ(767px){
+    padding-left: 0;
+  }
 }
 
 
@@ -92,7 +102,7 @@ $speed: 90s;
 
 .single_Img{
   display: block;
-  width: max(200px, vw(230px));
+  width: max(250px, vw(230px));
   height: auto;
   aspect-ratio: initial !important;
   opacity: 0.3;

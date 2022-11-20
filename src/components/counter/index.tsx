@@ -6,6 +6,8 @@ import style from './counter.module.scss';
 type CreateConfetti = NonNullable<Parameters<NonNullable<IProps["refConfetti"]>>[0]>
 
 export default function Counter() {
+  const [visible, setVisible] = useState(true);
+
   const refAnimationInstance = useRef<CreateConfetti | null>(null);
 
   const getInstance = useCallback((instance: CreateConfetti | null) => {
@@ -54,11 +56,12 @@ export default function Counter() {
   const setcount = () => {
     fire();
     setCount((count) => count + 1)
+    setVisible((prev) => !prev);
   };
   return (
     <>
       <p className={style.count_Para}>{count} are attending</p>
-      <button className={style.count_Btn} onClick={setcount}> I am attending &#128276;</button>
+      {visible && (<button className={style.count_Btn} onClick={setcount}> I am attending</button>) }
       <ReactCanvasConfetti refConfetti={getInstance} className={style.confetti_Canvas} />
     </>
   )

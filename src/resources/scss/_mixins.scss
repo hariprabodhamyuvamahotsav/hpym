@@ -198,9 +198,11 @@
 // 		text-decoration: underline;
 // 	}
 @mixin hover {
-  &:hover,
-  &:active {
-    @content;
+  @media (hover: hover) {
+    &:hover,
+    &:active{
+      @content;
+    }
   }
 }
 
