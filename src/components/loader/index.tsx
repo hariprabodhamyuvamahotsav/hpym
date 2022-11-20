@@ -15,34 +15,47 @@ import img8 from './images/8.jpg';
 import img9 from './images/9.jpg';
 
 export const Loader: FC<{ className?: string }> = ({ className }) => {
-  const el = useRef<HTMLHeadingElement | null>(null);
+  const el = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     let loaderTl: ReturnType<typeof gsap.timeline> = gsap.timeline();
-    if (el.current?.classList.contains('active')) {
-      loaderTl.set('.loader_Content', {
-        y: 40,
+    if (el.current) {
+      loaderTl.set('.loader_Content *, .main_Slogan_Wrapper', {
+        y: 30,
         autoAlpha: 0,
-      }).to('.loader_Content', {
+      }).to('.loader_Content *', {
         duration: 2,
         y: 0,
-        autoAlpha: 1,
-        ease: 'power4.out',
+        ease: 'expo.out',
+        stagger: {amount: 1},
         clearProps: true,
-      }, 0)
+      })
+      .to('.loader_Content *', {
+        duration: 3,
+        ease: 'expo.out',
+        autoAlpha: 1,
+        stagger: {amount: 1},
+        clearProps: true,
+      }, 0);
       loaderTl.set('.single_Img', {scale: 0.7, autoAlpha: 0}, 0)
       .to('.single_Img', {
         duration: 2,
-        ease: 'Expo.easeOut',
+        ease: 'expo.out',
         scale: 1,
         stagger: {amount: 0.6, grid: 'auto', from: 'center'}
       }, '-=2')
-      .to('.single_Img', {
+      .to('.single_Img, .main_Slogan_Wrapper', {
         duration: 3,
-        ease: 'Power1.easeOut',
+        ease: 'power1.out',
+        y: 0,
         autoAlpha: 1,
         stagger: {amount: 0.6, grid: 'auto', from: 'center'},
         clearProps: true,
-      }, '-=2');
+      }, '-=2.5');
+      return () => {
+        if (loaderTl) {
+          loaderTl.kill();
+        }
+      };
     }
   },[el])
 
@@ -54,7 +67,7 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
           <small className={style.main_Title_Hari}>Hari</small>
           <small className={style.main_Title_Prabodham}>Prabodham</small>
           <span className={style.main_Title_Yuva}>Yuva</span>
-          <span className={style.main_Title_Mahotsav}>Mahotsav</span>
+          <span className={style.main_Title_Mahotsav}>Mahotsav 2023</span>
         </h1>
         <Counter />
       </div>
@@ -83,6 +96,12 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
             <Image className={cn(style.single_Img, 'single_Img')} src={img8} alt='' width={150} height={200} />
             <Image className={cn(style.single_Img, 'single_Img')} src={img9} alt='' width={150} height={200} />
           </div>
+        </div>
+      </div>
+      <div className={cn(style.main_Slogan_Wrapper, 'main_Slogan_Wrapper')}>
+        <div className={style.main_Slogan_Span}>
+          <span>Bas ek, &apos;Tu Raji Tha&apos;&nbsp;Bas ek, &apos;Tu Raji Tha&apos;&nbsp;</span>
+          <span>Bas ek, &apos;Tu Raji Tha&apos;&nbsp;Bas ek, &apos;Tu Raji Tha&apos;&nbsp;</span>
         </div>
       </div>
     </div>

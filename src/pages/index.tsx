@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="description" content="HariPrabodham Yuva Mahotsav 2023" />
         <link rel="icon" href="../resources/images/HPYM-2023-Logo.jpg" />
       </Head>
-      <Loader className='active' />
+      <Loader />
     </>
   )
 }

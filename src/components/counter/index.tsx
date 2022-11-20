@@ -52,7 +52,7 @@ export default function Counter() {
     });
   }, [makeShot]);
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(368);
   const setcount = () => {
     fire();
     setCount((count) => count + 1)
@@ -61,7 +61,7 @@ export default function Counter() {
   return (
     <>
       <p className={style.count_Para}>{count} are attending</p>
-      {visible && (<button className={style.count_Btn} onClick={setcount}> I am attending</button>) }
+      {visible && (<button className={style.count_Btn} onClick={setcount}>Yes, I am attending</button>) }
       <ReactCanvasConfetti refConfetti={getInstance} className={style.confetti_Canvas} />
     </>
   )
