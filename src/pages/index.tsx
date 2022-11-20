@@ -1,6 +1,6 @@
 import Head from 'next/head'
 // import Image from 'next/image'
-import Loader from '@components/loader'
+import Loader from '../components/loader';
 
 export default function Home() {
   return (

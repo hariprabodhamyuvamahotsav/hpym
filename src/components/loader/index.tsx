@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState } from "react";
 import Image from 'next/image'
 import style from './loader.module.scss';
-import Counter from '@components/counter';
+import Counter from '../counter';
 
 
 import img1 from './images/1.jpg';
