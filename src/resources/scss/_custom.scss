@@ -4,6 +4,7 @@ body{
   background: $primary;
   background: #EDE4E0;
   background: #DFDFDE;
+  background: #383838;
   &:after {
 		content: "";
 		position: fixed;
@@ -14,10 +15,13 @@ body{
 		z-index: 15000;
 		pointer-events: none;
 		mix-blend-mode: color-burn;
-		// filter: url(#noiseFilter);
 		animation: c0226 1s steps(2) infinite;
 		background-image: url(../../resources/images/noise.png);
 		background-position: 50%;
+    background-size: 80px;
+    @include MQ(1024px){
+      background-size: 50px;
+    }
 	}
 }
 

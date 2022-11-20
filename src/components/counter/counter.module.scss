@@ -5,6 +5,7 @@
   font-size: $h4;
   text-align: center;
   width: 100%;
+  color: $grey-lightest;
   @include MQ(767px){
     font-size: 1.3rem;
   }
