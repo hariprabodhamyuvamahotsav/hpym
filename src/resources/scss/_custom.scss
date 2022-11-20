@@ -1,10 +1,10 @@
 body{
   background: #F8F0DF;
-  background: $primary-light;
   background: $primary;
   background: #EDE4E0;
   background: #DCDCDC;
   // background: #383838;
+  background: $primary-light;
   &:after {
 		content: "";
 		position: fixed;

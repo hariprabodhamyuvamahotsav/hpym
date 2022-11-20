@@ -74,7 +74,10 @@
   justify-content: space-between;
   flex-direction: column;
   z-index: -1;
-  padding: 0;
+  padding: 3vw 0;
+  @include MQ(767px){
+    padding: 2rem 0;
+  }
 
 }
 
@@ -102,11 +105,11 @@ $speed: 90s;
 
 .single_Img{
   display: block;
-  width: max(250px, vw(230px));
+  width: max(200px, vw(200px));
   height: auto;
   aspect-ratio: initial !important;
-  opacity: 0.7;
-  margin: 0 10vw;
+  margin: 0 max(60px, 12vw);
+  filter: contrast(1.1) grayscale(0.5) brightness(1.1);
 }
 
 
