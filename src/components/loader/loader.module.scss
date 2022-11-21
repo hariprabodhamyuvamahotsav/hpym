@@ -138,10 +138,10 @@ $speed: 90s;
     font-size: $h1*2;
     font-weight: bold;
     text-transform: uppercase;
-    color: $text;
+    color: $primary-light;
     -webkit-text-fill-color: $primary-light; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgba($text,0.1);
+    -webkit-text-stroke-color: rgba($text,0.15);
     animation: marquee $speed*2 linear infinite;
   }
   &:first-child{

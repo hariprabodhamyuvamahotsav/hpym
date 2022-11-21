@@ -61,7 +61,7 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
 
   const extraClasses = getExtraClasses(style, className);
   return (
-    <div ref={el} className={cn(style.loader_Container, extraClasses)}>
+    <section ref={el} className={cn(style.loader_Container, extraClasses)} data-scroll-section>
       <div className={cn(style.loader_Content, 'loader_Content')}>
         <h1 className={cn(style.main_Title, 'main_Title')}>
           <small className={style.main_Title_Hari}>Hari</small>
@@ -104,6 +104,6 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
           <span>Bas ek, &apos;Tu Raji Tha&apos;&nbsp;Bas ek, &apos;Tu Raji Tha&apos;&nbsp;</span>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
