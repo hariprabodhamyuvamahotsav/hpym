@@ -97,12 +97,20 @@ $speed: 90s;
 
 .img_Row{
   animation: marquee $speed linear infinite;
+  animation-play-state: paused;
+  [data-scroll-section-inview] &{
+    animation-play-state: running;
+  }
 }
 
 .img_Grid{
   &:last-child{
     .img_Row{
       animation: marquee $speed linear infinite reverse;
+      animation-play-state: paused;
+      [data-scroll-section-inview] &{
+        animation-play-state: running;
+      }
     }
   }
 }
@@ -143,6 +151,10 @@ $speed: 90s;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgba($text,0.15);
     animation: marquee $speed*2 linear infinite;
+    animation-play-state: paused;
+    [data-scroll-section-inview] &{
+      animation-play-state: running;
+    }
   }
   &:first-child{
     span{
