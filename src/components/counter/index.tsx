@@ -57,9 +57,9 @@ export const Counter: FC<{ className?: string }> = ({ className }) => {
 
   const [count, setCount] = useState(368);
   const setcount = () => {
-    let parent = document.querySelector('body');
-    let child = document.querySelector('.confetti_Canvas');
-    parent.appendChild(child);
+    let parent = document.querySelector('body')!;
+    let child = document.querySelector('.confetti_Canvas')!;
+    parent?.appendChild(child);
     fire();
     setCount((count) => count + 1)
     setVisible((prev) => !prev);

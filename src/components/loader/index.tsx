@@ -76,7 +76,7 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
       .to("body", { duration: 1, backgroundColor: "#F8F0DF", ease: 'none' })
       .to(".loader_Content", {
         duration: 1,
-        yPercent: '+=30',
+        yPercent: 60,
         ease: 'none'
       },'-=1')
 
