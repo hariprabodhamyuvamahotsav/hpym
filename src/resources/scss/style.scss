@@ -6,6 +6,82 @@
 @import 'custom';
 @import 'loco';
 
+/* Webfont: The_Memories */
+@font-face {
+  font-family: 'TheMemories';
+  src: url('../fonts/the_memories/TheMemories-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Nickole */
+@font-face {
+  font-family: 'Nickole';
+  src: url('../fonts/nickole/Nickole-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Batusa-Bold */
+@font-face {
+  font-family: 'Melgizr';
+  src: url('../fonts/melgizr/Melgizr.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Batusa-Bold */
+@font-face {
+  font-family: 'Batusa';
+  src: url('../fonts/batusa/Batusa.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Karenz-Bold */
+@font-face {
+  font-family: 'Karenz';
+  src: url('../fonts/karenz/Karenz.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Webfont: Wensley-Bold */
+@font-face {
+  font-family: 'Wensley';
+  src: url('../fonts/wensley/wensley-bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Wensley';
+  src: url('../fonts/wensley/wensley-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Wensley';
+  src: url('../fonts/wensley/wensley-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
 @font-face {
     font-family: 'Canvas';
     src: url('../fonts/canvas/Canvas-Black.woff2') format('woff2');

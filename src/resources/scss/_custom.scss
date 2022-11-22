@@ -1,14 +1,15 @@
 body{
-  background: #F8F0DF;
-  background: $primary;
-  background: #EDE4E0;
-  background: #DCDCDC;
+  background-color: #F8F0DF;
+  background-color: $primary;
+  background-color: #EDE4E0;
+  background-color: #DCDCDC;
   // background: #383838;
-  background: $primary-light;
-  background: #F1EEE9;
+  background-color: $primary-light;
+  background-color: #F1EEE9;
+  background-color: #fff;
   // transition: background-color 1s ease;
   &:after {
-		// content: "";
+		content: "";
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -20,11 +21,11 @@ body{
     opacity: 0.08;
 		background-image: url(../../resources/images/gains.gif);
 		background-position: 50%;
-    background-size: 500px;
-    @include MQ(1024px){
-      // display: none;
-      background-size: 150px;
-    }
+    background-size: 750px;
+    // @include MQ(1024px){
+    //   // display: none;
+    //   background-size: 700px;
+    // }
 	}
 }
 

@@ -3,6 +3,7 @@ import Lenis from '@studio-freight/lenis'
 
 import Head from 'next/head'
 import { Loader } from '../components/loader';
+import { About } from 'components/about';
 
 export default function Home() {
   const mainEl = useRef<HTMLDivElement | null>(null);
@@ -34,9 +35,7 @@ export default function Home() {
       </Head>
       <main className='viewport' ref={mainEl}>
         <Loader />
-        <section className="intro intro1">
-          <h1>This is the Introduction section</h1>
-        </section>
+        <About />
       </main>
 
     </>

@@ -3,7 +3,7 @@ import React, { FC, useCallback, useRef, useState } from "react";
 import ReactCanvasConfetti, {type IProps} from 'react-canvas-confetti';
 import style from './counter.module.scss';
 import { getExtraClasses } from '../../utils/common.util';
-
+import cn from 'classnames';
 type CreateConfetti = NonNullable<Parameters<NonNullable<IProps["refConfetti"]>>[0]>
 
 
@@ -54,8 +54,12 @@ export const Counter: FC<{ className?: string }> = ({ className }) => {
     });
   }, [makeShot]);
 
+
   const [count, setCount] = useState(368);
   const setcount = () => {
+    let parent = document.querySelector('body');
+    let child = document.querySelector('.confetti_Canvas');
+    parent.appendChild(child);
     fire();
     setCount((count) => count + 1)
     setVisible((prev) => !prev);
@@ -67,7 +71,7 @@ export const Counter: FC<{ className?: string }> = ({ className }) => {
         <p className={style.count_Para}>{count} are attending</p>
         {visible && (<button className={style.count_Btn} onClick={setcount}>Yes, I am attending</button>) }
       </div>
-      <ReactCanvasConfetti refConfetti={getInstance} className={style.confetti_Canvas} />
+      <ReactCanvasConfetti refConfetti={getInstance} className={cn(style.confetti_Canvas, 'confetti_Canvas')} />
     </>
   )
 }
