@@ -2,10 +2,12 @@ import { FC, useRef, useEffect } from 'react';
 // import { motion } from "framer-motion";
 import Image from 'next/image'
 import style from './loader.module.scss';
-import Counter from '../counter';
+import { Counter } from '../counter';
 import { getExtraClasses } from '../../utils/common.util';
 import cn from 'classnames';
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 import img1 from './images/1.jpg';
 import img2 from './images/2.jpg';
@@ -19,6 +21,7 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
   useEffect(() => {
     let loaderTl: ReturnType<typeof gsap.timeline> = gsap.timeline();
     if (el.current) {
+      el.current.classList.add(style.active_loader);
       loaderTl.set('.loader_Content *, .main_Slogan_Wrapper', {
         y: 30,
         autoAlpha: 0,
@@ -51,6 +54,16 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
         stagger: {amount: 0.6, grid: 'auto', from: 'center'},
         clearProps: true,
       }, '-=2.5');
+
+      const colorShift = gsap.to("body", { backgroundColor: "#ccc" })
+      ScrollTrigger.create({
+        trigger: '.loader_Container',
+        start: "bottom bottom",
+        end: "bottom top",
+        scrub: true,
+        animation: colorShift
+      });
+
       return () => {
         if (loaderTl) {
           loaderTl.kill();
@@ -61,15 +74,15 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
 
   const extraClasses = getExtraClasses(style, className);
   return (
-    <section ref={el} className={cn(style.loader_Container, extraClasses)} data-scroll-section>
+    <section ref={el} className={cn(style.loader_Container, extraClasses, 'loader_Container')}>
       <div className={cn(style.loader_Content, 'loader_Content')}>
         <h1 className={cn(style.main_Title, 'main_Title')}>
           <small className={style.main_Title_Hari}>Hari</small>
           <small className={style.main_Title_Prabodham}>Prabodham</small>
-          <span className={style.main_Title_Yuva}>Yuva</span>
-          <span className={style.main_Title_Mahotsav}>Mahotsav 2023</span>
+          <strong className={style.main_Title_Yuva}>Yuva</strong>
+          <strong className={style.main_Title_Mahotsav}>Mahotsav 2023</strong>
         </h1>
-        <Counter />
+        <Counter className={style.main_Counter} />
       </div>
 
       <div className={style.img_Grid_Container}>

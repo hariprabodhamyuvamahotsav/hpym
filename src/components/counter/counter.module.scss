@@ -14,7 +14,7 @@
 .count_Btn{
   width: auto;
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   font-size: 1rem;
   padding: 0.3em 0.5em;
   border: 0;
@@ -24,10 +24,6 @@
   transition-property: background-color, color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translate(-50%, 0);
   @include hover{
     background-color: $grey-dark;
   }

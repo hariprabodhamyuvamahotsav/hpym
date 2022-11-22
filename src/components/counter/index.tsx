@@ -1,11 +1,13 @@
 import { CreateTypes } from 'canvas-confetti';
-import React, { useCallback, useRef, useState } from "react";
+import React, { FC, useCallback, useRef, useState } from "react";
 import ReactCanvasConfetti, {type IProps} from 'react-canvas-confetti';
 import style from './counter.module.scss';
+import { getExtraClasses } from '../../utils/common.util';
 
 type CreateConfetti = NonNullable<Parameters<NonNullable<IProps["refConfetti"]>>[0]>
 
-export default function Counter() {
+
+export const Counter: FC<{ className?: string }> = ({ className }) => {
   const [visible, setVisible] = useState(true);
 
   const refAnimationInstance = useRef<CreateConfetti | null>(null);
@@ -58,10 +60,13 @@ export default function Counter() {
     setCount((count) => count + 1)
     setVisible((prev) => !prev);
   };
+  const extraClasses = getExtraClasses(style, className);
   return (
     <>
-      <p className={style.count_Para}>{count} are attending</p>
-      {visible && (<button className={style.count_Btn} onClick={setcount}>Yes, I am attending</button>) }
+      <div className={extraClasses}>
+        <p className={style.count_Para}>{count} are attending</p>
+        {visible && (<button className={style.count_Btn} onClick={setcount}>Yes, I am attending</button>) }
+      </div>
       <ReactCanvasConfetti refConfetti={getInstance} className={style.confetti_Canvas} />
     </>
   )
