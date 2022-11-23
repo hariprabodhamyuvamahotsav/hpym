@@ -1,0 +1,56 @@
+@import '../../resources/scss/variables';
+@import '../../resources/scss/mixins';
+
+.about_Section{
+  // min-height: 100vh;
+  // display: flex;
+  // align-items: center;
+  padding: 5rem;
+}
+
+.about_Columns{
+  // display: flex;
+  align-items: center;
+}
+
+
+.about_Content{
+  width: min(100%, rem(700px));
+  margin-inline: auto;
+}
+
+.about_Title{
+  text-align: center;
+  margin: 0.5em;
+}
+
+.about_Image{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: calc(1830/1610);
+}
+
+.about_Upasana_Contain{
+  display: block;
+  opacity: 0;
+  filter: blur(20px) brightness(2);
+  transition: filter 1s 0.2s ease-out, opacity 1s ease-out;
+  &.active{
+    opacity: 1;
+    filter:blur(0) brightness(1);
+  }
+}
+
+.swamiji_Image,
+.upasana_Img{
+  display: block;
+  width: max(60%, rem(200px));
+  height: auto;
+  margin-inline: auto;
+}
+
+.swamiji_Image{
+  margin-top: -14%;
+  width: max(50%, rem(200px));
+}

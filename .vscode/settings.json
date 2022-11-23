@@ -1,0 +1,28 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true,
+    "node_modules": true,
+    "**/.next": true,
+    ".next": true,
+    "**/.vscode": true,
+    ".vscode": true,
+    "src/@types": true,
+    "src/utils": true,
+    "**/README.md": true,
+    "README.md": true,
+    "**/.gitignore": true,
+    ".gitignore": true,
+    "**/.eslintrc.json": true,
+    ".eslintrc.json": true,
+    "src/pages/api": true,
+    "**/api": true,
+    "api": true
+  },
+  "explorerExclude.backup": {}
+}
