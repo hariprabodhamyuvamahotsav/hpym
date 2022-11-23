@@ -33,7 +33,7 @@ export default function Home() {
         <meta charSet="utf-8"/>
         <title>HariPrabodham Yuva Mahotsav 2023</title>
         <meta name="description" content="HariPrabodham Yuva Mahotsav 2023" />
-        <link rel="icon" href={logo} />
+        <link rel="icon" href={logo.src} />
       </Head>
       <main className='viewport' ref={mainEl}>
         <Loader />
