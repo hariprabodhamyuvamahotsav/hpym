@@ -41,26 +41,25 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
         stagger: {amount: 1},
         clearProps: true,
       }, 0);
-      loaderTl.set('.single_Img', {scale: 0.7, autoAlpha: 0}, 0)
-      .to('.single_Img', {
-        duration: 2,
-        ease: 'expo.out',
-        scale: 1,
-        stagger: {amount: 0.6, grid: 'auto', from: 'center'}
-      }, '-=2')
-      .to('.single_Img, .main_Slogan_Wrapper', {
-        duration: 3,
-        ease: 'power1.out',
-        y: 0,
-        autoAlpha: 1,
-        stagger: {amount: 0.6, grid: 'auto', from: 'center'},
-        clearProps: true,
-      }, '-=2.5');
+      loaderTl.set('.single_Img', { scale: 0.7, autoAlpha: 0 }, 0)
+        .to('.single_Img', {
+          duration: 2,
+          ease: 'expo.out',
+          scale: 1,
+          stagger: { amount: 0.6, grid: 'auto', from: 'center' }
+        }, '-=2')
+        .to('.single_Img, .main_Slogan_Wrapper', {
+          duration: 3,
+          ease: 'power1.out',
+          autoAlpha: 1,
+          stagger: { amount: 0.6, grid: 'auto', from: 'center' },
+          clearProps: true,
+        }, '-=2.5')
 
       ScrollTrigger.create({
         trigger: el.current,
         start: "top top+=1",
-        end: "bottom center",
+        end: "bottom top",
         toggleClass: style.active_loader,
       });
 
@@ -73,17 +72,13 @@ export const Loader: FC<{ className?: string }> = ({ className }) => {
           scrub: true,
         }
       })
-      .to("body", { duration: 1, backgroundColor: "#F8F0DF", ease: 'none' })
       .to(".loader_Content", {
         duration: 1,
         yPercent: 50,
         ease: 'none'
-      }, '-=1')
-      // .to(".loader_Container", {
-      //   duration: 1,
-      //   yPercent: -10,
-      //   ease: 'none'
-      // }, '-=1')
+      },0)
+      // .to(".about_Content", { duration: 2, color: "#F8F0DF", ease: 'none' },'-=1')
+      .to("body", { duration: 1, backgroundColor: "#F8F0DF", ease: 'none' },'-=1')
 
       return () => {
         if (loaderTl) {

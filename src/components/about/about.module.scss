@@ -8,11 +8,17 @@
   align-items: flex-start;
   align-items: center;
   overflow: hidden;
+  @include MQ(1023px){
+    display: block;
+  }
 }
 
 .about_Content{
   width: 50%;
   margin-inline: auto;
+  @include MQ(1023px){
+    width: 100%;
+  }
 }
 
 .about_Title{
@@ -37,6 +43,9 @@
   &.active{
     opacity: 1;
     filter: none;
+  }
+  @include MQ(1023px){
+    width: 100%;
   }
 }
 

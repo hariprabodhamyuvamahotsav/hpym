@@ -45,7 +45,7 @@ export const About: FC<{ className?: string }> = ({ className }) => {
 
       ScrollTrigger.create({
         trigger: '.about_Image_Contain',
-        start: "top 100%",
+        start: "top 80%",
         toggleClass: style.active,
         once: true,
       });
@@ -53,8 +53,8 @@ export const About: FC<{ className?: string }> = ({ className }) => {
 
       let aboutImgTl = gsap.timeline({
         scrollTrigger: {
-          trigger: '.about_Content',
-          start: "top 80%",
+          trigger: '.about_Image_Contain',
+          start: "top bottom",
           end: 'top top',
           scrub: true,
         }
