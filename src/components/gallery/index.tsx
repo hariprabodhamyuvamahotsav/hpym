@@ -18,7 +18,7 @@ export const Gallery: FC<{ className?: string }> = ({ className }) => {
   useEffect(() => {
     if (el.current) {
 
-      let containerHeight = document.querySelector?.('.img_Wrapper')?.clientHeight;
+      let containerHeight = document.querySelector?.('.img_Wrapper')?.clientHeight!;
       // console.log(containerHeight);
       gsap.set('.img_Column:nth-child(2n)', {
         y: (index, target, targets) => { return (-target?.offsetHeight + containerHeight) },
