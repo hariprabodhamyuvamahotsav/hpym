@@ -14,7 +14,8 @@ export default function Home() {
       const lenis = new Lenis({
         duration: 1.2,
         smooth: true,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothTouch: true,
       })
 
       const raf = (time?: number) => {
@@ -38,6 +39,7 @@ export default function Home() {
       <main className='viewport' ref={mainEl}>
         <Loader />
         <About />
+        <section className="sample" />
       </main>
 
     </>

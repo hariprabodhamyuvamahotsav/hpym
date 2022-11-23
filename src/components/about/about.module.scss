@@ -2,23 +2,22 @@
 @import '../../resources/scss/mixins';
 
 .about_Section{
-  padding: 5rem 5rem 0;
-}
-
-.about_Columns{
-  // display: flex;
+  padding: 5rem 2.5rem 2.5rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
   align-items: center;
+  overflow: hidden;
 }
-
 
 .about_Content{
-  width: min(100%, rem(700px));
+  width: 50%;
   margin-inline: auto;
 }
 
 .about_Title{
   text-align: center;
-  margin: 0.5em;
+  margin: 0 0 0.5em;
 }
 
 .about_Image{
@@ -29,25 +28,29 @@
 }
 
 .about_Upasana_Contain{
+  width: 50%;
   display: block;
+  margin-bottom: -4rem;
   opacity: 0;
-  filter: blur(20px) brightness(2);
-  transition: filter 1s 0.2s ease-out, opacity 1s ease-out;
+  filter: blur(20px) brightness(2) grayscale(1) contrast(2);
+  transition: filter 1.3s ease-out, opacity 1s ease-out;
   &.active{
     opacity: 1;
-    filter:blur(0) brightness(1);
+    filter: none;
   }
 }
 
 .swamiji_Image,
 .upasana_Img{
   display: block;
-  width: max(60%, rem(200px));
+  // width: max(60%, rem(200px));
+  width: 100%;
   height: auto;
   margin-inline: auto;
 }
 
 .swamiji_Image{
-  margin-top: -14%;
-  width: max(50%, rem(200px));
+  margin-top: -22%;
+  // width: max(50%, rem(200px));
+  width: 100%;
 }
