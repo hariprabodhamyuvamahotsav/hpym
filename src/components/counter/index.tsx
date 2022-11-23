@@ -2,7 +2,7 @@ import { CreateTypes } from 'canvas-confetti';
 import React, { FC, useCallback, useRef, useState } from "react";
 import ReactCanvasConfetti, {type IProps} from 'react-canvas-confetti';
 import style from './counter.module.scss';
-import { getExtraClasses } from '../../utils/common.util';
+import { getExtraClasses } from '@utils/common.util';
 import cn from 'classnames';
 type CreateConfetti = NonNullable<Parameters<NonNullable<IProps["refConfetti"]>>[0]>
 

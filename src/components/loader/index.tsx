@@ -3,7 +3,7 @@ import { FC, useRef, useEffect } from 'react';
 import Image from 'next/image'
 import style from './loader.module.scss';
 import { Counter } from '../counter';
-import { getExtraClasses } from '../../utils/common.util';
+import { getExtraClasses } from '@utils/common.util';
 import cn from 'classnames';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';

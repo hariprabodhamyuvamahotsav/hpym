@@ -2,8 +2,9 @@ import { useRef, useEffect } from "react";
 import Lenis from '@studio-freight/lenis'
 
 import Head from 'next/head'
-import { Loader } from '../components/loader';
-import { About } from 'components/about';
+import { Loader } from '@components/loader';
+import { About } from '@components/about';
+import { Gallery } from '@components/gallery';
 
 import logo from '../resources/images/HPYM_2023.jpg';
 
@@ -15,7 +16,7 @@ export default function Home() {
         duration: 1.2,
         smooth: true,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothTouch: true,
+        // smoothTouch: true,
       })
 
       const raf = (time?: number) => {
@@ -39,6 +40,7 @@ export default function Home() {
       <main className='viewport' ref={mainEl}>
         <Loader />
         <About />
+        <Gallery />
         <section className="sample" />
       </main>
 

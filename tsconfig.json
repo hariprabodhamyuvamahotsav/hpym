@@ -16,12 +16,13 @@
     "jsx": "preserve",
     "incremental": true,
     "paths":{
-      "@components/*": ["/components/*"],
-      "@resources/*": ["/resources/*"],
-      "@pages/*": ["/pages/*"],
-      "@images/*": ["/resources/images/*"],
-      "@styles/*": ["/resources/scss/*"],
-      "@fonts/*": ["/resources/fonts/*"]
+      "@components/*": ["components/*"],
+      "@resources/*": ["resources/*"],
+      "@pages/*": ["pages/*"],
+      "@images/*": ["resources/images/*"],
+      "@scss/*": ["resources/scss/*"],
+      "@utils/*": ["utils/*"],
+      "@fonts/*": ["resources/fonts/*"]
     }
   },
   // "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

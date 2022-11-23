@@ -1,6 +1,6 @@
 import React, { FC, useRef, useEffect } from "react";
 import style from './about.module.scss';
-import { getExtraClasses } from '../../utils/common.util';
+import { getExtraClasses } from '@utils/common.util';
 import cn from 'classnames'
 import Image from 'next/image';
 import { gsap } from "gsap";
