@@ -17,7 +17,8 @@ export const Loader: React.FC = () => {
         requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
-
+    // console.log(lenis.scroll);
+    lenis.scrollTo(0);
     lenis.stop();
 
 

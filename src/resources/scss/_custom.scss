@@ -7,7 +7,7 @@ body{
   background-color: $primary-light;
   background-color: #F1EEE9;
   background-color: #fff;
-  // transition: background-color 1s ease;
+  // transition: background-color 0.2s ease;
   &:after {
 		content: "";
 		position: fixed;
@@ -18,14 +18,14 @@ body{
 		z-index: 15000;
 		pointer-events: none;
 		// animation: c0226 1s steps(2) infinite;
-    opacity: 0.08;
+    opacity: 0.06;
 		background-image: url(../../resources/images/Xqaq.gif);
 		background-position: 50%;
     background-size: 130px;
-    // @include MQ(1024px){
-    //   // display: none;
-    //   background-size: 700px;
-    // }
+    @include MQ(1024px){
+      opacity: 0.05;
+      background-size: 50px;
+    }
 	}
 }
 
