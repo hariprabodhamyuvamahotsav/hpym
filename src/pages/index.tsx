@@ -1,34 +1,12 @@
-import { useRef, useEffect } from "react";
-import Lenis from '@studio-freight/lenis'
-
 import Head from 'next/head'
-import { Loader } from '@components/loader';
+import { Hero } from '@components/hero';
 import { About } from '@components/about';
 import { Gallery } from '@components/gallery';
 
 import logo from '../resources/images/HPYM_2023.jpg';
+import { Loader } from '@components/loader';
 
 export default function Home() {
-  const mainEl = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    if (mainEl.current) {
-      const lenis = new Lenis({
-        duration: 1.2,
-        smooth: true,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        // smoothTouch: true,
-      })
-
-      const raf = (time?: number) => {
-          lenis.raf(time)
-          requestAnimationFrame(raf)
-      }
-      requestAnimationFrame(raf)
-
-      return () => lenis.destroy();
-    }
-  }, [mainEl])
-
   return (
     <>
       <Head>
@@ -37,8 +15,9 @@ export default function Home() {
         <meta name="description" content="HariPrabodham Yuva Mahotsav 2023" />
         <link rel="icon" href={logo.src} />
       </Head>
-      <main className='viewport' ref={mainEl}>
-        <Loader />
+      <Loader />
+      <main className='viewport'>
+        <Hero />
         <About />
         <Gallery />
         <section className="sample" />

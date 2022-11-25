@@ -37,8 +37,8 @@
   display: block;
   margin-bottom: -4rem;
   opacity: 0;
-  filter: blur(10px) brightness(2) grayscale(1) contrast(2);
-  transition: filter 1s ease-out, opacity 0.6s ease-out;
+  filter: blur(10px);
+  transition: filter 0.6s ease-out, opacity 0.6s ease-out;
   &.active{
     opacity: 1;
     filter: none;
