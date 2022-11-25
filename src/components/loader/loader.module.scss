@@ -22,7 +22,7 @@
 }
 
 .svg_container{
-  width: rem(500px);
+  width: min(75vw, rem(500px));
   position: relative;
   isolation: isolate;
   aspect-ratio: 937/989;
