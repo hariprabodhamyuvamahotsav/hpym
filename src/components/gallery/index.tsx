@@ -91,13 +91,25 @@ export const Gallery: FC<{ className?: string }> = ({ className }) => {
 
   return (
     <section ref={el} className={cn(style.gallery_Section, extraClasses, 'gallery_Section')}>
-      <div className={style.img_Contain}>
+      <h2 className={style.hash_Tags}>
+          <span>#WeForHPYM</span>
+          <span>#HPYMSurat</span>
+          <span>#HariPrabodham</span>
+          <span>#HPYM2023</span>
+      </h2>
+      <div className={style.img_Collage}>
+        {images.slice(0, 4).map((image, index) => (
+            <div key={index} className={style.img_Wrapper}>
+              <div className={style.img}>
+                <Image priority src={image} width={200} height={300} alt='' />
+              </div>
+            </div>
+          ))}
+      </div>
+      {/* <div className={style.img_Contain}>
         <div className={cn(style.img_Contain_Scroller, 'img_Contain_Scroller')}>
           {images.slice(0, 15).map((image, index) => (
             <div key={index} className={style.img_Wrapper}>
-              {/* <div className={cn(style.img, style.img_Glow)}>
-                <Image priority src={image} width={200} height={300} alt='' />
-              </div> */}
               <div className={style.img}>
                 <Image priority src={image} width={200} height={300} alt='' />
               </div>
@@ -107,17 +119,13 @@ export const Gallery: FC<{ className?: string }> = ({ className }) => {
         <div className={cn(style.img_Contain_Scroller, 'img_Contain_Scroller')}>
           {images.slice(15, 31).map((image, index) => (
             <div key={index} className={style.img_Wrapper}>
-              {/* <div className={cn(style.img, style.img_Glow)}>
-                <Image priority src={image} width={200} height={300} alt='' />
-              </div> */}
               <div className={style.img}>
                 <Image priority src={image} width={200} height={300} alt='' />
               </div>
             </div>
           ))}
         </div>
-      </div>
-      <div className={style.tags_contain}></div>
+      </div> */}
       {/* <div className={cn(style.img_Wrapper, 'img_Wrapper')}>
         <div className={cn(style.img_Column, 'img_Column1 img_Column')}>
           {images.slice(0, 5).map((image, index) => (

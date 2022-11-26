@@ -1,4 +1,4 @@
-import '@styles/style.scss'
+import '@scss/style.scss'
 import type { AppProps } from 'next/app'
 import { Analytics } from '@vercel/analytics/react';
 

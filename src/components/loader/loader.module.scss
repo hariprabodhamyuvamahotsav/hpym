@@ -9,7 +9,7 @@
   bottom: 0;
   right: 0;
   height: 100%;
-  background: $secondary;
+  background: $primary-light;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -83,6 +83,6 @@
   transform-box: fill-box;
   transform-origin: center bottom;
   opacity: 0;
-  transform: scale(.4) translate(0, 20%);
+  transform: scale(0.4) translate(0, 20%);
   transition: opacity 2s 3.5s ease, transform 2s 3s cubic-bezier(0.25, 1, 0.5, 1);
 }
