@@ -10,7 +10,7 @@ const images = [
   // require('@components/loader/images/29.jpg'),
   // require('@components/loader/images/30.jpg'),
 
-  require('@components/hero/images/15.jpg'),
+  require('@components/hero/images/30.jpg'),
   require('@components/hero/images/8.jpg'),
   require('@components/hero/images/23.jpg'),
   require('@components/hero/images/16.jpg'),

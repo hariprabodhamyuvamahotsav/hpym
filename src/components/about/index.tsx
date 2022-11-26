@@ -54,7 +54,7 @@ export const About: FC<{ className?: string }> = ({ className }) => {
       let aboutImgTl = gsap.timeline({
         scrollTrigger: {
           trigger: '.about_Image_Contain',
-          start: "top bottom",
+          start: "top 90%",
           end: 'top top',
           scrub: true,
         }
@@ -62,14 +62,16 @@ export const About: FC<{ className?: string }> = ({ className }) => {
       .fromTo('.upasana_Img',{
           yPercent: 50,
         }, {
-          duration: 1,
-          yPercent: 0,
+        duration: 1,
+        yPercent: 0,
+        ease: 'power1.out',
       } )
       .fromTo('.swamiji_Image',{
         yPercent: 100,
-        }, {
-          duration: 1,
-          yPercent: 0,
+      }, {
+        duration: 1,
+        yPercent: 0,
+        ease: 'power1.out',
       },'-=1' )
 
 
@@ -84,7 +86,7 @@ export const About: FC<{ className?: string }> = ({ className }) => {
 
   }, [el]);
   return (
-    <section ref={el} className={cn(style.about_Section, extraClasses, 'about_Section')}>
+    <section ref={el} className={cn(style.about_Section, extraClasses, 'about_Section section')} data-bgcolor="#F8F0DF">
       <div className={cn(style.about_Content, 'about_Content')}>
         <h2 className={style.about_Title}>About</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt obcaecati ullam omnis excepturi similique harum sit non provident cum doloribus sequi laudantium eum, totam earum commodi corrupti eaque? Quis, soluta.</p>

@@ -104,7 +104,7 @@ export const Hero: FC<{ className?: string }> = ({ className }) => {
 
   const extraClasses = getExtraClasses(style, className);
   return (
-    <section ref={el} className={cn(style.hero_Container, extraClasses, 'hero_Container')}>
+    <section ref={el} className={cn(style.hero_Container, extraClasses, 'hero_Container section')} data-bgcolor="#ffffff">
       <div className={style.img_Grid_Container}>
         <div className={style.img_Grid}>
           <div className={style.img_Row}>
